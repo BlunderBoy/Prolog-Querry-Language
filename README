@@ -1,0 +1,37 @@
+Macarie Razvan Cristian, 322CB
+
+Print:
+Pentru print am mers pe aceiasi idee ca tema in Haskell si de data asta era
+oarecum mai usor ca trebuie facut asa datorita felului in care merge 
+make_format_string. Am transformat toate stringurile din tabel intr-un numar, 
+respectiv lungimea lor si am facut asta pe toate liniile. Dupa aceea am transpus
+matricea rezultata si am calculat maximul pe linii (adica pe coloane daca ar fi
+netranspusa). Dupa asta am facut o lista cu maximele din listele matricei.
+In final apelez recursiv format pe toate linii matricei.
+
+PQL - Prolog Query Language (HQL > PQL sincer)
+
+Join:
+Join e un maplist... Se aplica recursiv pe elemente predicatul. (un fel de
+zipWith din Haskell).
+
+Select: 
+Select ia headerul tabelului si lista de coloane si face o lista de indecsi.
+Cu lista de indecsi folosesc takeIndex care introcude elementul X luat recursiv
+din lista de indecsi intr-o lista de coloane. In final transpun lista de coloane
+si am ajuns la rezultat.
+TailHeader si HeaderTabel sunt helpere care intorc header si tail, adica 
+schema = header, tail = intrari.
+
+Filter:
+Filter e un predicat de verificare a constrangerilor pe care l-am facut si la
+curs (csp). 
+
+Eval:
+Eval ne evalueaza recursiv clauzele, incepand cu cea mai nested. Dupa ce 
+evalueaza functia nested urmatoare, evalueaza apoi operatia curenta, asta se face
+recursiv pana la ultima operatie.
+
+ComplexQ1
+Am aplicat filtru peste filtru si am folosit sub_string ca sa vad daca se 
+gaseste escu in nume. Nu am verificat sa fie la final totusi, dar functioneaza.
